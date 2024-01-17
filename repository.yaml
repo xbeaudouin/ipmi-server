@@ -1,4 +1,3 @@
-# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
-name: Example Home Assistant add-on repository
-url: 'https://github.com/home-assistant/addons-example'
-maintainer: Awesome Maintainer <awesome@example.com>
+name: IPMI-Server add-on for Home Assistant
+url: 'https://github.com/xbeaudouin/ipmi-server'
+maintainer: Xavier Beaudouin <kiwi+ipmiserver@6meat.fr>

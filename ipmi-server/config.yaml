@@ -2,7 +2,7 @@ name: IPMItool server
 version: "1.1.25"
 slug: ipmi-server
 description: IPMItool server
-url: "https://github.com/ateodorescu/home-assistant-addons"
+url: "https://github.com/xbeaudouin/ipmi-server"
 arch:
   - armhf
   - armv7
