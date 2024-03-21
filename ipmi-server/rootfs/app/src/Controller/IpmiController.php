@@ -179,18 +179,21 @@ class IpmiController
                 foreach ($this->ipmiTypes as $ipmi_type) {
                     $ret = $this->runCommand(array_merge($cmd, ['-I', $ipmi_type, 'bmc', 'info']));
 
+		    error_log("BMC INFO");
                     if ($ret) {
                         $results = explode(PHP_EOL, $ret);
                         $device = $this->extractValuesFromResults($results);
 
                         $ret = $this->runCommand(array_merge($cmd, ['-I', $ipmi_type, 'fru']));
 
+		    	error_log("FRU");
                         if ($ret) {
                             $results = explode(PHP_EOL, $ret);
                             $device = array_merge($device, $this->extractValuesFromResults($results));
                         }
 
                         $ret = $this->runCommand(array_merge($cmd, ['-I', $ipmi_type, 'chassis', 'power', 'status']));
+		    	error_log("POWER INFO");
 
                         if ($ret) {
                             $on = (trim($ret) === "Chassis Power is on");
